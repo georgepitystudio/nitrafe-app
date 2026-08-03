@@ -101,8 +101,9 @@ Get-FileHash "Nitrafe One_1.0.7_x64-setup.exe"
 ---
 
 <div align="center">
+To report bugs, and make suggestions contact @georgepity on discord or @georgepityc on instagram.
 
 © 2026 **Nitrafe Technologies Inc.** All rights reserved.  
-Official Website: [nitrafe.one](https://nitrafe.one) | Contact Support: [support@nitrafe.one](mailto:support@nitrafe.one)
+Official Website: [Coming Soon](#) | Contact Support: [Coming Soon](mailto:#)
 
 </div>
