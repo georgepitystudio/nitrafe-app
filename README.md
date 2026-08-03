@@ -62,14 +62,14 @@ Nitrafe One is engineered for Windows power users, competitive gamers, and works
 ## ⚙️ Installation & Deployment
 
 ### Standard Executable Installation
-1. Download [`Nitrafe One_1.0.6_x64-setup.exe`](./Nitrafe%20One_1.0.6_x64-setup.exe?raw=true).
+1. Download [`Nitrafe One_1.0.7_x64-setup.exe`](./Nitrafe%20One_1.0.7_x64-setup.exe?raw=true).
 2. Double-click the installer executable to launch the NSIS Setup Wizard.
 3. Follow the onscreen wizard steps and launch **Nitrafe One**.
 
 ### Enterprise & Silent MSI Deployment
 To deploy silently across enterprise systems via Command Prompt or PowerShell:
 ```powershell
-msiexec /i "Nitrafe One_1.0.6_x64_en-US.msi" /qb
+msiexec /i "Nitrafe One_1.0.7_x64_en-US.msi" /qb
 ```
 
 ---
