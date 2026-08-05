@@ -1,6 +1,6 @@
 {
-  "version": "1.0.7",
-  "release_date": "2026-07-24",
-  "download_url": "https://github.com/maxzol/nitrafe-one/releases/download/v1.0.7/Nitrafe.One_1.0.7_x64-setup.exe",
-  "release_notes": "v1.0.7 Release: Fixed Tauri ACL permissions for terminal events, native Win32 process working set RAM flushing, live Active Game Boost status metrics dashboard, and stability enhancements."
+  "version": "1.0.8",
+  "release_date": "2026-08-05",
+  "download_url": "https://github.com/georgepitystudio/nitrafe-app/releases/download/v1.0.8/Nitrafe.One_1.0.8_x64-setup.exe",
+  "release_notes": "v1.0.8 — Fluidity & Backend overhaul. Instant startup, event-driven scan/clean progress, GPU-accelerated animations. Design tokens & real depth shadows. Differentiated Game Boost presets (eSports/Balanced/Streamer now write distinct MMCSS values and restore on disable). Parallel disk scanning with rayon. Safer cleanup skips files modified in the last 5 minutes. Adaptive metrics emitter (slows down when window is unfocused)."
 }
