@@ -1,164 +1,140 @@
 # Nitrafe One
 
-**v1.0.8 — 2026-08-05**
+**The Windows optimization suite that delivers real, measurable results.**
 
-A Windows desktop system-optimization suite built on Tauri 2 + React 19 + Rust. Cleans temporary files, purges standby RAM, applies Game Boost tweaks (MMCSS, power plan, network throttling), manages startup apps, and uninstalls applications with residual cleanup — all via real Win32/NtApi calls, no fake progress.
+> v1.0.8 (Stable) • Windows 10 / 11 (64-bit) • © Nitrafe Software Team
 
----
-
-## Download v1.0.8
-
-- **Setup (.exe)**: https://github.com/georgepitystudio/nitrafe-app/blob/main/Nitrafe%20One_1.0.8_x64-setup.exe?raw=true
-- **Installer (.msi)**: https://github.com/georgepitystudio/nitrafe-app/blob/main/Nitrafe%20One_1.0.8_x64_en-US.msi?raw=true
-
-Both links use `?raw=true` so the browser downloads the installer directly instead of opening the GitHub blob page.
+Nitrafe One reclaims disk space, frees memory, reduces in-game latency, watches over your Windows security and uninstalls applications completely. Every operation runs locally on your PC through real Windows system mechanisms, and every number you see is measured on your machine — never estimated, never faked.
 
 ---
 
-## What's new in v1.0.8
+## Download
 
-### Fluidity & startup
-- **Instant startup**: inline splash renders in <100ms; React mount replaces it after first paint. No more white-screen delay.
-- **Zero idle polling**: metrics stream from a single Rust `system_metrics` event subscription. When the window is unfocused, the emitter drops from 2s to 10s to save CPU.
-- **Lazy tabs**: each tab (Clean, Game Boost, RAM, Protect, Uninstaller, Settings) is its own React chunk, loaded on demand. Main bundle is 292 KB (was ~600 KB with `framer-motion`, now removed).
-- **Real progress events**: `scan_progress` and `clean_progress` events replace the previous 1.8–2.8s artificial `setInterval` waits.
+- **Setup (.exe)** — recommended for most users:
+  https://github.com/georgepitystudio/nitrafe-app/blob/main/Nitrafe%20One_1.0.8_x64-setup.exe?raw=true
+- **Installer (.msi)** — for silent & enterprise deployments:
+  https://github.com/georgepitystudio/nitrafe-app/blob/main/Nitrafe%20One_1.0.8_x64_en-US.msi?raw=true
 
-### UI & design
-- CSS design tokens on `:root` (`--accent`, `--surface`, `--ink`, `--line`, semantic tones) — mapped into Tailwind so the whole app is themable.
-- **Fixed `shadow-xs` bug**: 72 occurrences were rendering nothing (class doesn't exist in Tailwind 3.4). Replaced with a real `shadow-card` scale.
-- Single Inter Variable font file replaces 6 separate `@fontsource/inter/*` imports.
-- Sparkline indicators for CPU and RAM in the title bar (last 30 samples).
-- `tabular-nums` on every live numeric value so digits stop jumping between ticks.
-- `prefers-reduced-motion` disables continuous animations.
-- Keyboard focus rings (`focus-visible:ring-accent`) across all interactive elements.
-- Unified `Modal` component with focus trap, `Esc`-to-close, and consistent backdrop.
-- Unified `Toast` system replaces 8 separate ephemeral message states.
+Both links start the download directly.
 
-### Game Boost — real differentiation
-The three presets now write distinct MMCSS values instead of running identical code:
+### Installation
 
-| Preset | GPU Priority | Task Priority | SFIO | SystemResponsiveness | NetworkThrottling | Flush Standby |
-|---|---|---|---|---|---|---|
-| **eSports** | 8 | 6 | High | 0 | Disabled | ✓ |
-| **Balanced** | 7 | 5 | High | 10 | 10 | ✓ |
-| **Streamer** | 6 | 4 | Normal | 20 | 10 | ✗ (preserved for OBS) |
+1. Download the Setup (.exe) or the MSI installer.
+2. Run the installer and follow the prompts (your settings are preserved across updates).
+3. Launch Nitrafe One from the Start Menu or desktop shortcut.
 
-Disabling a preset now **restores the previous MMCSS values** captured at activation (snapshotted in `HKCU\Software\Nitrafe\GameBoost`). Report surfaces `needs_admin` / `power_plan_applied` truthfully via a warning banner.
-
-### Backend
-- `dir_size_and_count` is **parallelized with rayon** + `AtomicU64` — deep scan of large `%TEMP%` directories is now 4-8× faster.
-- Cleanup skips files modified in the **last 5 minutes** to avoid interrupting active installers.
-- `SYS_INFO` sysinfo instance consolidated (was duplicated between the polling command and the emitter thread).
-- Installed-apps list is cached (60s TTL) with an explicit `refresh_installed_apps` command; two-phase load (registry-first, on-disk sizes enriched in background).
-- Removed duplicated `run_diagnostic_tool` command — the streaming variant is the single path now.
-- Release binary uses `opt-level = "z"`, `lto = true`, `codegen-units = 1`, `strip = true`.
+> Note: because each release is brand-new, Windows SmartScreen may show a warning. Click **More info → Run anyway** to install.
 
 ---
 
 ## Features
 
-### Clean
-Real Windows temp directories are scanned in parallel:
-- `%TEMP%` — user temporary files
-- `C:\Windows\Temp` — system temp
-- Chrome + Edge browser cache (`%LOCALAPPDATA%\Google\Chrome\User Data\Default\Cache`, `Microsoft\Edge\User Data\Default\Cache`)
-- `%LOCALAPPDATA%\D3DSCache` — orphan shader caches
-- **Deep mode also includes**: `C:\Windows\SoftwareDistribution\Download` (Windows Update cache), `%LOCALAPPDATA%\CrashDumps` (app crash dumps)
+### Clean — reclaim real disk space
 
-Each category shows real byte counts, safety level (Safe / Recommended / Advanced), and can be toggled off individually before cleaning.
+- Scans the places where Windows and browsers actually accumulate junk: user & system temporary files, Chrome & Edge cache, GPU shader cache, Windows Update leftovers and crash dumps (in Deep mode).
+- Two scan modes — **Standard** and **Deep** — with smooth live progress.
+- Every category shows the exact reclaimable size and a safety level (Safe / Recommended / Advanced); you can toggle any category off before cleaning.
+- Safety by design: files touched in the last 5 minutes are never deleted, so active installers and downloads are not interrupted.
+
+### Game Boost — a real edge while you play
+
+One click applies a complete, coherent tuning preset; disabling it restores your previous Windows configuration automatically.
+
+- **Balanced Gaming** — smoother gameplay without starving background applications.
+- **Ultra eSports Latency** — maximum responsiveness: top CPU/GPU scheduling priority, network throttling disabled, standby RAM flushed.
+- **Custom Streamer** — low latency for your game while keeping OBS and streaming services smooth.
+
+Under the hood, each preset adjusts the Windows power plan, multimedia scheduling priorities and network tuning as a single atomic change — and the app reports honestly what was applied and what requires administrator rights.
 
 ### RAM Optimizer
-Multi-method flush via real Win32 / NtApi:
-- **Working sets** — `K32EmptyWorkingSet` for every process (`OpenProcess` with `PROCESS_QUERY_INFORMATION | PROCESS_SET_QUOTA`)
-- **Standby list** — `NtSetSystemInformation(SystemMemoryListInformation, MemoryPurgeStandbyList=4)` — the same mechanism used by Microsoft's RAMMap
-- **All** — both, sequentially
 
-Reports `bytes_freed = ram_before - ram_after` (measured with sysinfo, not estimated). Standby purge requires admin/`SeProfileSingleProcessPrivilege`; the UI surfaces the failure honestly.
+- One-click memory reclaim using the same low-level mechanisms as Microsoft's own memory utilities.
+- **Auto-optimize**: set a RAM usage threshold and Nitrafe frees memory in the background when you exceed it.
+- Honest reporting: freed memory is measured before/after, not guessed.
 
-### Game Boost
-See table above. Also flips Windows power plan to **High Performance** (`8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c`) via `powercfg /setactive`, and reverts to the previously observed plan on disable.
+### Protect Security
 
-### Protect
-- Security score dashboard with Windows Defender / Firewall / telemetry / suspicious process reporting.
-- Startup app manager (real registry: `HKCU\Software\Microsoft\Windows\CurrentVersion\Run` and equivalent).
-- One-click Windows System Restore Point creation.
+- Security score dashboard: Windows Defender status, firewall, telemetry and risky-process checks.
+- Startup manager: review and disable startup applications safely, in one place.
+- One-click Windows System Restore Point creation before you change anything.
 
-### Uninstaller
-- Two-phase list: registry fast (instant paint), then real on-disk sizes computed in the background.
-- Filter by leftover risk (High / Medium / Low), sort by name or size.
-- After running the official uninstaller, scans for residual folders and registry keys and offers a one-click purge.
-- Free tier: 2 uninstalls / month; PRO: unlimited.
+### Uninstaller — removes apps *and* what they leave behind
 
-### Settings
-- Diagnostic tools with live streaming stdout (SFC `/scannow`, DISM `/CheckHealth`, DNS `/flushdns`) — each command's real output pipes into a terminal view in real time.
-- Language selector (9 languages).
-- Hardware fingerprint display for license activation.
-- Manual update check (GitHub Releases + `version.json` fallbacks).
+- Fast list of installed applications with real sizes and a leftover-risk rating (High / Medium / Low).
+- Runs the official uninstaller, then scans for residual folders and registry entries and purges them with one click.
+- Free tier: 2 uninstalls per month. PRO: unlimited.
+
+### Settings & Diagnostics
+
+- Built-in Windows diagnostic tools (System File Checker, DISM image health, DNS cache flush) with live console output.
+- 9 interface languages.
+- In-app update checks — the installer preserves your settings.
+- License activation for PRO.
 
 ---
 
-## Repository layout
+## Privacy & honesty
 
-```
-apps/
-  klyro-desktop/          Tauri 2 + React 19 desktop app
-    src/                  Frontend (App shell, lazy tabs, hooks, UI kit)
-    src-tauri/            Rust backend commands + emitter
-  klyro-service/          Windows service (background scheduling)
-  klyro-cli/              CLI companion
-crates/
-  klyro-core/             SystemCleaner, RAMOptimizer, GameBoost, SystemTweaker engines
-  klyro-winapi/           NtSetSystemInformation wrapper for standby-list purge
-  klyro-safety/           Security dashboard, startup app manager, restore points
-  klyro-license/          License validation + hardware fingerprint
-  klyro-uninstaller/      Installed-apps enumeration, real leftover scanning, official uninstaller runner
-  klyro-updater/          Release channel plumbing
-```
+- **100% local**: everything runs on your PC. Nothing is collected or uploaded.
+- **Real progress, measured results** — no fake animations, no placebo numbers.
+- **Reversible by design**: disabling a preset or tweak restores your previous configuration.
 
 ---
 
-## Build
+## Nitrafe One PRO
 
-### Development
-```bash
-cd apps/klyro-desktop
-npm install
-npm run tauri dev
-```
+| Plan | Price | Covers |
+|---|---|---|
+| Personal | $19 / year | 1 PC |
+| Family | $39 / year | up to 3 PCs |
+| Teams | $89 / year | up to 10 PCs |
 
-### Release (produces `.exe` + `.msi` under `target/release/bundle/`)
-```bash
-cd apps/klyro-desktop
-npm run tauri build
-```
-
-Bundles are written to:
-- `target/release/bundle/nsis/Nitrafe One_1.0.8_x64-setup.exe`
-- `target/release/bundle/msi/Nitrafe One_1.0.8_x64_en-US.msi`
-
-### Type-check + build the frontend only
-```bash
-cd apps/klyro-desktop
-npx tsc --noEmit
-npm run build
-```
-
-### Cargo-only verification
-```bash
-cargo check --workspace
-cargo build --release --package klyro-core
-```
+PRO unlocks **Game Boost presets** and **unlimited uninstalls**. Activate anytime in-app with your license key.
 
 ---
 
-## Tech stack
+## What's new in v1.0.8
 
-- **Frontend**: React 19, TypeScript 5.7 (strict), Tailwind CSS 3.4 with CSS design tokens, Vite 6 (target `chrome110`), lucide-react icons, Inter Variable font.
-- **Backend**: Rust 1.7+ workspace, Tauri 2.2, sysinfo 0.30 for metrics, rayon 1.10 for parallel scans, winreg 0.55, windows 0.58 (Win32 APIs), single `NtSetSystemInformation` binding in `klyro-winapi`.
-- **Release profile**: `opt-level = "z"`, `lto = true`, `codegen-units = 1`, `panic = "abort"`, `strip = true`.
+- Instant startup and a noticeably smoother, more fluid interface.
+- Honest scan & clean progress that tracks real work being done.
+- Game Boost presets now differ for real (eSports / Balanced / Streamer) and fully restore your previous settings on disable.
+- Up to 4–8× faster deep scans on large temporary folders.
+- Safer cleanup that never interrupts active installers or downloads.
 
 ---
 
-## License
+## System requirements
 
-Proprietary — © Nitrafe Software Team. See `apps/klyro-desktop/src-tauri/resources/licensing/EULA.txt`.
+- Windows 10 or Windows 11, 64-bit.
+- ~50 MB of free disk space.
+- Administrator rights recommended for full Game Boost and standby-RAM features (everything else works without).
+- Internet connection only for downloading the app and checking for updates.
+
+---
+
+## FAQ
+
+**Does Nitrafe One send my data anywhere?**
+No. All scanning, cleaning and tuning happens locally on your PC.
+
+**Will Clean delete my personal files?**
+No. It only touches well-known temporary locations, each shown with its safety level and exact size, and you can disable any category before cleaning.
+
+**Why does Game Boost ask for administrator?**
+Some Windows scheduling priorities can only be changed with elevated rights. Nitrafe tells you exactly what was applied and what was skipped, and still applies everything that doesn't require admin.
+
+**Is it safe to flush standby RAM?**
+Yes. Windows itself uses these mechanisms; flushed memory is simply returned to your running applications.
+
+**How do updates work?**
+Nitrafe checks for updates in-app and points you to the official installer. Your settings are preserved.
+
+---
+
+## Support & feedback
+
+- Use the **Send Feedback** button inside the app for bugs, ideas or questions.
+- Website & checkout: https://nitrafe.one
+- The End-User License Agreement (EULA) is included with the installer.
+
+**Nitrafe One** is proprietary software © Nitrafe Software Team. All rights reserved.
