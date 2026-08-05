@@ -17,10 +17,10 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/georgepitystudio/nitrafe-app/blob/main/Nitrafe%20One_1.0.8_x64-setup.exe?raw=true">
+  <a href="https://github.com/georgepitystudio/nitrafe-app/releases/download/update/Nitrafe.One_1.0.8_x64-setup.exe">
     <img src="https://img.shields.io/badge/Download-Setup%20(.exe)-4F46E5?style=for-the-badge&logo=windows&logoColor=white" alt="Download Setup">
   </a>
-  <a href="https://github.com/georgepitystudio/nitrafe-app/blob/main/Nitrafe%20One_1.0.8_x64_en-US.msi?raw=true">
+  <a href="https://github.com/georgepitystudio/nitrafe-app/releases/download/update/Nitrafe.One_1.0.8_x64_en-US.msi">
     <img src="https://img.shields.io/badge/Download-MSI%20Installer-059669?style=for-the-badge&logo=windows&logoColor=white" alt="Download MSI">
   </a>
 </p>
