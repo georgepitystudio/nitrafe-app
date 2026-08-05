@@ -26,7 +26,7 @@
 </p>
 
 > [!NOTE]
-> **Nitrafe One is currently in public beta** every feature is fully unlocked and free while we polish the final release. Feedback is welcome via the in-app **Send Feedback** button.
+> **Nitrafe One is currently in public beta** every feature is fully unlocked and free while we polish the final release. Feedback is welcome via Instagram (@georgepityc). The in-app feedback button is currently not functional..
 
 ---
 
