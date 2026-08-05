@@ -10,7 +10,11 @@
 
 **The Ultimate Next-Generation Windows Optimization, Game Booster & Security Suite.**
 
+<<<<<<< HEAD
 [📥 Download Executable Setup (.exe)](#-official-release-installers) • [📦 Download Windows Installer (.msi)](#-official-release-installers)
+=======
+[🌐 Official Website (Coming Soon)](#) • [📥 Download Executable Setup (.exe)](#-official-release-installers) • [📦 Download Windows Installer (.msi)](#-official-release-installers)
+>>>>>>> a3e4dff956bdc5f3166762950aa6c3e35552e39a
 
 </div>
 
@@ -84,14 +88,22 @@ Disabling now **restores your previous MMCSS values**, snapshotted in `HKCU\Soft
 ## ⚙️ Installation & Deployment
 
 ### Standard Executable Installation
+<<<<<<< HEAD
 1. Download [`Nitrafe One_1.0.8_x64-setup.exe`](./Nitrafe%20One_1.0.8_x64-setup.exe?raw=true).
+=======
+1. Download [`Nitrafe One_1.0.7_x64-setup.exe`](./Nitrafe%20One_1.0.7_x64-setup.exe?raw=true).
+>>>>>>> a3e4dff956bdc5f3166762950aa6c3e35552e39a
 2. Double-click the installer executable to launch the NSIS Setup Wizard.
 3. Follow the onscreen wizard steps and launch **Nitrafe One**.
 
 ### Enterprise & Silent MSI Deployment
 To deploy silently across enterprise systems via Command Prompt or PowerShell:
 ```powershell
+<<<<<<< HEAD
 msiexec /i "Nitrafe One_1.0.8_x64_en-US.msi" /qb
+=======
+msiexec /i "Nitrafe One_1.0.7_x64_en-US.msi" /qb
+>>>>>>> a3e4dff956bdc5f3166762950aa6c3e35552e39a
 ```
 
 ---
@@ -172,8 +184,13 @@ Our goal is to build modern, secure, and high-performance software that helps Wi
 ---
 
 <div align="center">
+To report bugs, and make suggestions contact @georgepity on discord or @georgepityc on instagram.
 
 © 2026 **Nitrafe Technologies Inc.** All rights reserved.  
+<<<<<<< HEAD
 Contact Support: [support@nitrafe.one](mailto:support@nitrafe.one)
+=======
+Official Website: [Coming Soon](#) | Contact Support: [Coming Soon](mailto:#)
+>>>>>>> a3e4dff956bdc5f3166762950aa6c3e35552e39a
 
 </div>
