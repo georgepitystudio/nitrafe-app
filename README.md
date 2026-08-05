@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>The Windows optimization suite that delivers real, measurable results.</strong><br>
-  Clean junk • Free RAM • Boost games • Protect your system — all from one fluid app.
+  Clean junk • Free RAM • Boost games • Protect your system all from one fluid app.
 </p>
 
 <p align="center">
@@ -26,7 +26,7 @@
 </p>
 
 > [!NOTE]
-> **Nitrafe One is currently in public beta** — every feature is fully unlocked and free while we polish the final release. Feedback is welcome via the in-app **Send Feedback** button.
+> **Nitrafe One is currently in public beta** every feature is fully unlocked and free while we polish the final release. Feedback is welcome via the in-app **Send Feedback** button.
 
 ---
 
@@ -34,20 +34,20 @@
 
 | 🔒 100% Local | 📊 Measured, never faked | ↩️ Reversible by design |
 |---|---|---|
-| Everything runs on your PC. Nothing is collected or uploaded. | Real progress and before/after measurements — no placebo numbers. | Every tweak restores your previous configuration when disabled. |
+| Everything runs on your PC. Nothing is collected or uploaded. | Real progress and before/after measurements no placebo numbers. | Every tweak restores your previous configuration when disabled. |
 
 ---
 
 ## Features
 
-### 🧹 Clean — reclaim real disk space
+### 🧹 Clean reclaim real disk space
 
 - Scans where Windows & browsers actually accumulate junk: user/system temp, Chrome & Edge cache, GPU shader cache, Windows Update leftovers, crash dumps (Deep mode).
 - **Standard** and **Deep** scan modes with smooth live progress.
-- Exact reclaimable size + safety level per category — toggle anything off before cleaning.
+- Exact reclaimable size + safety level per category toggle anything off before cleaning.
 - Files touched in the last 5 minutes are never deleted, so active installers aren't interrupted.
 
-### 🎮 Game Boost — a real edge while you play
+### 🎮 Game Boost a real edge while you play
 
 One click applies a complete, coherent tuning preset; disabling restores your previous Windows configuration automatically.
 
@@ -57,7 +57,7 @@ One click applies a complete, coherent tuning preset; disabling restores your pr
 | ⚡ **Ultra eSports Latency** | Top CPU/GPU scheduling priority, network throttling off, standby RAM flushed. |
 | 🎥 **Custom Streamer** | Low game latency while keeping OBS & streaming services smooth. |
 
-Each preset adjusts the Windows power plan, multimedia scheduling and network tuning as one atomic change — with an honest report of what was applied and what needs administrator rights.
+Each preset adjusts the Windows power plan, multimedia scheduling and network tuning as one atomic change with an honest report of what was applied and what needs administrator rights.
 
 ### 🧠 RAM Optimizer
 
@@ -68,10 +68,10 @@ Each preset adjusts the Windows power plan, multimedia scheduling and network tu
 ### 🛡️ Protect Security
 
 - Security score dashboard: Defender, firewall, telemetry and risky-process checks.
-- Startup manager — review and disable startup apps safely.
+- Startup manager review and disable startup apps safely.
 - One-click Windows System Restore Point before you change anything.
 
-### 🗑️ Uninstaller — removes apps *and* what they leave behind
+### 🗑️ Uninstaller removes apps *and* what they leave behind
 
 - Fast list of installed apps with real sizes and leftover-risk rating (High / Medium / Low).
 - Runs the official uninstaller, then scans for residual folders & registry entries and purges them in one click.
@@ -111,7 +111,7 @@ No. All scanning, cleaning and tuning happens locally on your PC.
 
 <details>
 <summary><b>Will Clean delete my personal files?</b></summary>
-No. It only touches well-known temporary locations — each shown with its safety level and exact size — and you can disable any category before cleaning.
+No. It only touches well-known temporary locations each shown with its safety level and exact size and you can disable any category before cleaning.
 </details>
 
 <details>
@@ -121,7 +121,7 @@ Some Windows scheduling priorities can only be changed with elevated rights. Nit
 
 <details>
 <summary><b>Is it safe to flush standby RAM?</b></summary>
-Yes — Windows itself uses these mechanisms. Flushed memory is simply returned to your running applications.
+Yes. Windows itself uses these mechanisms. Flushed memory is simply returned to your running applications.
 </details>
 
 <details>
@@ -132,6 +132,6 @@ Nitrafe checks for updates in-app and points you to the official installer. Your
 ---
 
 <p align="center">
-  <sub><b>Nitrafe One</b> is proprietary software © Nitrafe Software Team — All rights reserved.<br>
-  Website & support: <a href="https://nitrafe.one">nitrafe.one</a></sub>
+  <sub><b>Nitrafe One</b> is proprietary software © Nitrafe Suite Enterprise All rights reserved.<br>
+  Website & support: <a href="#">Website coming soon</a></sub>
 </p>
