@@ -1,6 +1,7 @@
 {
   "version": "1.0.8",
   "release_date": "2026-08-05",
-  "download_url": "https://github.com/georgepitystudio/nitrafe-app/releases/download/v1.0.8/Nitrafe.One_1.0.8_x64-setup.exe",
+  "download_url": "https://github.com/georgepitystudio/nitrafe-app/blob/main/Nitrafe%20One_1.0.8_x64-setup.exe?raw=true",
+  "download_url_msi": "https://github.com/georgepitystudio/nitrafe-app/blob/main/Nitrafe%20One_1.0.8_x64_en-US.msi?raw=true",
   "release_notes": "v1.0.8 — Fluidity & Backend overhaul. Instant startup, event-driven scan/clean progress, GPU-accelerated animations. Design tokens & real depth shadows. Differentiated Game Boost presets (eSports/Balanced/Streamer now write distinct MMCSS values and restore on disable). Parallel disk scanning with rayon. Safer cleanup skips files modified in the last 5 minutes. Adaptive metrics emitter (slows down when window is unfocused)."
 }
