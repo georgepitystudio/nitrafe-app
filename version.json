@@ -1,7 +1,7 @@
 {
-  "version": "1.0.8",
-  "release_date": "2026-08-05",
-  "download_url": "https://github.com/georgepitystudio/nitrafe-app/blob/main/Nitrafe%20One_1.0.8_x64-setup.exe?raw=true",
-  "download_url_msi": "https://github.com/georgepitystudio/nitrafe-app/blob/main/Nitrafe%20One_1.0.8_x64_en-US.msi?raw=true",
-  "release_notes": "v1.0.8 — Fluidity & Backend overhaul. Instant startup, event-driven scan/clean progress, GPU-accelerated animations. Design tokens & real depth shadows. Differentiated Game Boost presets (eSports/Balanced/Streamer now write distinct MMCSS values and restore on disable). Parallel disk scanning with rayon. Safer cleanup skips files modified in the last 5 minutes. Adaptive metrics emitter (slows down when window is unfocused)."
+  "version": "1.0.9",
+  "release_date": "2026-10-26",
+  "download_url": "https://github.com/georgepitystudio/nitrafe-app/blob/main/Nitrafe%20One_1.0.9_x64-setup.exe?raw=true",
+  "download_url_msi": "https://github.com/georgepitystudio/nitrafe-app/blob/main/Nitrafe%20One_1.0.9_x64_en-US.msi?raw=true",
+  "release_notes": "v1.0.9 — Trust & Safety update. A smarter Uninstaller that only removes what truly belongs to the app you remove and never touches Windows or your other programs. A Protect score that now reflects your PC's real Defender, firewall and privacy status. A smoother interface that stays responsive during scans, clear confirmations for restore points and startup changes, and stronger built-in protection."
 }

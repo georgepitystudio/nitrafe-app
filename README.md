@@ -6,27 +6,27 @@
 
 <p align="center">
   <strong>The Windows optimization suite that delivers real, measurable results.</strong><br>
-  Clean junk • Free RAM • Boost games • Protect your system all from one fluid app.
+  Clean junk • Free RAM • Boost games • Protect your system — all from one fluid app.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/version-1.0.8--beta-4F46E5" alt="Version">
+  <img src="https://img.shields.io/badge/version-1.0.9--beta-4F46E5" alt="Version">
   <img src="https://img.shields.io/badge/status-Public%20Beta-F59E0B" alt="Status">
   <img src="https://img.shields.io/badge/platform-Windows%2010%20%2F%2011-0078D6?logo=windows&logoColor=white" alt="Platform">
   <img src="https://img.shields.io/badge/license-Proprietary-64748B" alt="License">
 </p>
 
 <p align="center">
-  <a href="https://github.com/georgepitystudio/nitrafe-app/releases/download/update/Nitrafe.One_1.0.8_x64-setup.exe">
+  <a href="https://github.com/georgepitystudio/nitrafe-app/blob/main/Nitrafe%20One_1.0.9_x64-setup.exe?raw=true">
     <img src="https://img.shields.io/badge/Download-Setup%20(.exe)-4F46E5?style=for-the-badge&logo=windows&logoColor=white" alt="Download Setup">
   </a>
-  <a href="https://github.com/georgepitystudio/nitrafe-app/releases/download/update/Nitrafe.One_1.0.8_x64_en-US.msi">
+  <a href="https://github.com/georgepitystudio/nitrafe-app/blob/main/Nitrafe%20One_1.0.9_x64_en-US.msi?raw=true">
     <img src="https://img.shields.io/badge/Download-MSI%20Installer-059669?style=for-the-badge&logo=windows&logoColor=white" alt="Download MSI">
   </a>
 </p>
 
 > [!NOTE]
-> **Nitrafe One is currently in public beta** every feature is fully unlocked and free while we polish the final release. Feedback is welcome via Instagram (@georgepityc). The in-app feedback button is currently not functional..
+> **Nitrafe One is currently in public beta** — every feature is fully unlocked and free while we polish the final release. Feedback is welcome via the in-app **Send Feedback** button.
 
 ---
 
@@ -34,20 +34,20 @@
 
 | 🔒 100% Local | 📊 Measured, never faked | ↩️ Reversible by design |
 |---|---|---|
-| Everything runs on your PC. Nothing is collected or uploaded. | Real progress and before/after measurements no placebo numbers. | Every tweak restores your previous configuration when disabled. |
+| Everything runs on your PC. Nothing is collected or uploaded. | Real progress and before/after measurements — no placebo numbers. | Every tweak restores your previous configuration when disabled. |
 
 ---
 
 ## Features
 
-### 🧹 Clean reclaim real disk space
+### 🧹 Clean — reclaim real disk space
 
 - Scans where Windows & browsers actually accumulate junk: user/system temp, Chrome & Edge cache, GPU shader cache, Windows Update leftovers, crash dumps (Deep mode).
 - **Standard** and **Deep** scan modes with smooth live progress.
-- Exact reclaimable size + safety level per category toggle anything off before cleaning.
+- Exact reclaimable size + safety level per category — toggle anything off before cleaning.
 - Files touched in the last 5 minutes are never deleted, so active installers aren't interrupted.
 
-### 🎮 Game Boost a real edge while you play
+### 🎮 Game Boost — a real edge while you play
 
 One click applies a complete, coherent tuning preset; disabling restores your previous Windows configuration automatically.
 
@@ -57,7 +57,7 @@ One click applies a complete, coherent tuning preset; disabling restores your pr
 | ⚡ **Ultra eSports Latency** | Top CPU/GPU scheduling priority, network throttling off, standby RAM flushed. |
 | 🎥 **Custom Streamer** | Low game latency while keeping OBS & streaming services smooth. |
 
-Each preset adjusts the Windows power plan, multimedia scheduling and network tuning as one atomic change with an honest report of what was applied and what needs administrator rights.
+Each preset adjusts the Windows power plan, multimedia scheduling and network tuning as one atomic change — with an honest report of what was applied and what needs administrator rights.
 
 ### 🧠 RAM Optimizer
 
@@ -67,14 +67,15 @@ Each preset adjusts the Windows power plan, multimedia scheduling and network tu
 
 ### 🛡️ Protect Security
 
-- Security score dashboard: Defender, firewall, telemetry and risky-process checks.
-- Startup manager review and disable startup apps safely.
-- One-click Windows System Restore Point before you change anything.
+- Security score based on your PC's real status: Microsoft Defender, Windows Firewall, privacy settings and startup load.
+- Startup manager — review and disable startup apps safely, re-enable them anytime.
+- One-click Windows System Restore Point before you change anything, with clear confirmation.
 
-### 🗑️ Uninstaller removes apps *and* what they leave behind
+### 🗑️ Uninstaller — removes apps *and* what they leave behind
 
 - Fast list of installed apps with real sizes and leftover-risk rating (High / Medium / Low).
-- Runs the official uninstaller, then scans for residual folders & registry entries and purges them in one click.
+- Runs the official uninstaller, waits until the app is really gone, then finds its residual folders & registry entries and purges them in one click.
+- Built-in safeguards: Windows folders, shared folders and other installed programs are never offered for deletion — and you review every item before it's removed.
 
 ### ⚙️ Settings & Diagnostics
 
@@ -83,13 +84,25 @@ Each preset adjusts the Windows power plan, multimedia scheduling and network tu
 
 ---
 
-## What's new in v1.0.8
+## What's new in v1.0.9 — Trust & Safety update
+
+🗑️ **Smarter, safer Uninstaller** — removes only what truly belongs to the app you uninstall. Windows folders and your other programs are always protected, and leftovers are cleaned only once the app is really gone.<br>
+🛡️ **A Protect score you can trust** — your score now reflects your PC's real Microsoft Defender, firewall and privacy status, with clear advice when something needs attention.<br>
+🚦 **Startup manager that tells it like it is** — clear confirmation for every change, and a heads-up when a program needs administrator rights.<br>
+⚡ **Smoother everyday experience** — the app stays responsive while it scans, measures and cleans in the background.<br>
+💾 **Clear restore point confirmations** — you'll know for sure when your safety snapshot was created.<br>
+🔒 **Stronger built-in protection** — Nitrafe One itself is now harder to misuse, keeping your PC safe even from malicious links.<br>
+✉️ **Easier feedback** — *Send Feedback* opens your email app with your message ready to go.
+
+<details>
+<summary><b>Previous release — v1.0.8</b></summary>
 
 ✨ Instant startup & a noticeably smoother interface<br>
 📈 Honest scan & clean progress that tracks real work<br>
 🎮 Game Boost presets that differ for real and fully restore on disable<br>
 🚀 Up to 4–8× faster deep scans on large temp folders<br>
 🛡️ Safer cleanup that never interrupts active installers
+</details>
 
 ---
 
@@ -111,7 +124,7 @@ No. All scanning, cleaning and tuning happens locally on your PC.
 
 <details>
 <summary><b>Will Clean delete my personal files?</b></summary>
-No. It only touches well-known temporary locations each shown with its safety level and exact size and you can disable any category before cleaning.
+No. It only touches well-known temporary locations — each shown with its safety level and exact size — and you can disable any category before cleaning.
 </details>
 
 <details>
@@ -121,7 +134,7 @@ Some Windows scheduling priorities can only be changed with elevated rights. Nit
 
 <details>
 <summary><b>Is it safe to flush standby RAM?</b></summary>
-Yes. Windows itself uses these mechanisms. Flushed memory is simply returned to your running applications.
+Yes — Windows itself uses these mechanisms. Flushed memory is simply returned to your running applications.
 </details>
 
 <details>
@@ -132,6 +145,6 @@ Nitrafe checks for updates in-app and points you to the official installer. Your
 ---
 
 <p align="center">
-  <sub><b>Nitrafe One</b> is proprietary software © Nitrafe Suite Enterprise All rights reserved.<br>
-  Website & support: <a href="#">Website coming soon</a></sub>
+  <sub><b>Nitrafe One</b> is proprietary software © Nitrafe Software Team — All rights reserved.<br>
+  Website & support: <a href="https://nitrafe.one">nitrafe.one</a></sub>
 </p>
